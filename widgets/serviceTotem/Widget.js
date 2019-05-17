@@ -1,17 +1,17 @@
 define([
-    'dojo/_base/declare', 
-    'jimu/BaseWidget',
-    'jimu/utils',
-    'dojo/_base/html',
-    // 'jimu/PanelManager',
-    'dojo/domReady!'
-    ],function(
-        declare, 
-        BaseWidget,
-        utils,
-        html
-        // PanelManager
-        ) {
+  'dojo/_base/declare',
+  'jimu/BaseWidget',
+  'jimu/utils',
+  'dojo/_base/html',
+  'bootstrap/Dropdown',
+  'bootstrap/Tab',
+  'bootstrap/Modal',
+  'dojo/domReady!'
+], function(
+  declare,
+  BaseWidget,
+  utils,
+  html) {
   //To create a widget, you need to derive from BaseWidget.
   return declare([BaseWidget], {
 
@@ -33,21 +33,17 @@ define([
       console.log('serviceTotem::startup');
     },
 
-    onOpen: function(){
+    onOpen: function() {
       console.log('serviceTotem::onOpen');
-
-      var position = {
-        left: "0px",
-        right: "0px",
-        bottom: "0px",
-        height: 150,
-      };
-
-      var style = utils.getPositionStyle(position);
-      style.position = 'absolute';
-      html.place(this.domNode, this.map.id);
-      html.setStyle(this.domNode, style);
-      html.setStyle(this.domNode, 'background-color', '#ffffff')
+      if (this.appConfig.theme.name === "BoxTheme" || 
+        this.appConfig.theme.name === "DartTheme" || 
+        this.appConfig.theme.name === "LaunchpadTheme") {
+        this.inherited(arguments);
+      } else {
+        html.place(this.domNode, this.map.id);
+        html.setStyle(this.domNode, 'bottom', '0px')
+        html.setStyle(this.domNode, 'position', 'absolute');
+      }
     },
 
     // onClose: function(){

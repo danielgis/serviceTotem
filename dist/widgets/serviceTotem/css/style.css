@@ -4,5 +4,44 @@
 .service-totem h3, p {
   margin-top: 0;
 }
+.service-totem {
+  color: #ffffff !important;
+  background-color: #4c4c4c;
+  left: 0px !important;
+  right: 0px !important;
+  bottom: 0px;
+  height: 155px !important;
+  display: block;
+	background-color: #292929;
+}
 
+.service-totem ul.nav > li > a{
+	color: #949494;
+}
+
+.service-totem ul.nav > li.active a{
+	background-color: #292929;
+	color: #ffffff;
+}
+
+.service-totem ul.nav > li > a:hover{
+	background-color: #292929;
+	color: #ffffff;
+	border-style: none;
+}
+/*.service-totem .ST_panelClose {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  width: 24px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  background-image: url('images/x.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px;
+}*/
 /* add additional custom styles */
