@@ -6,7 +6,7 @@
   "author": "daniel aguado h.",
   "license": "ISC",
   "scripts": {
-    "build": "esri-wab-build D:/daguado/dev-wab/WebAppBuilderForArcGIS/server/apps/2"
+    "build": "esri-wab-build D:/danielpc/desarrollo/ingemmet/dev-wab/WebAppBuilderForArcGIS/server/apps/2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

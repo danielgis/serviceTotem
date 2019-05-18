@@ -1,4 +1,4 @@
-define(['dojo/_base/declare', 'jimu/BaseWidget', 'jimu/utils', 'dojo/_base/html', 'bootstrap/Dropdown', 'bootstrap/Tab', 'bootstrap/Modal', 'dojo/domReady!'], function (declare, BaseWidget, utils, html) {
+define(['dojo/_base/declare', 'jimu/BaseWidget', 'jimu/utils', 'dojo/_base/html', 'jimu/WidgetManager', 'bootstrap/Dropdown', 'bootstrap/Tab', 'bootstrap/Modal', 'dojo/domReady!'], function (declare, BaseWidget, utils, html, widgetManager) {
     //To create a widget, you need to derive from BaseWidget.
     return declare([BaseWidget], {
 
@@ -29,7 +29,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', 'jimu/utils', 'dojo/_base/html'
                 html.setStyle(this.domNode, 'bottom', '0px');
                 html.setStyle(this.domNode, 'position', 'absolute');
             }
-        }
+        },
 
         // onClose: function(){
         //   console.log('serviceTotem::onClose');
@@ -59,7 +59,9 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', 'jimu/utils', 'dojo/_base/html'
         //   console.log('serviceTotem::resize');
         // }
 
-        //methods to communication between widgets:
+        _close: function _close() {
+            this.widgetManager.closeWidget(this.id);
+        }
 
     });
 });

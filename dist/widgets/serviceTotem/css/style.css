@@ -4,6 +4,8 @@
 .service-totem h3, p {
   margin-top: 0;
 }
+
+/*Define la barra en la parte inferior*/
 .service-totem {
   color: #ffffff !important;
   background-color: #4c4c4c;
@@ -12,9 +14,10 @@
   bottom: 0px;
   height: 155px !important;
   display: block;
-	background-color: #292929;
+	background-color: #292929e6;
 }
 
+/*Estilo de los tabs*/
 .service-totem ul.nav > li > a{
 	color: #949494;
 }
@@ -29,11 +32,25 @@
 	color: #ffffff;
 	border-style: none;
 }
-/*.service-totem .ST_panelClose {
+
+/*Generar horizontall scrolling*/
+.service-totem ul.nav{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: -webkit-box;  
+    display: -moz-box; 
+}
+
+.service-totem ul.nav>li {
+      float:none;
+}
+
+.service-totem .ST_panelClose {
   position: absolute;
   left: auto;
   right: 0px;
   width: 24px;
+  bottom: 0px;
   height: 30px;
   line-height: 30px;
   text-align: center;
@@ -43,5 +60,4 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px;
-}*/
-/* add additional custom styles */
+}

@@ -3,6 +3,7 @@ define([
   'jimu/BaseWidget',
   'jimu/utils',
   'dojo/_base/html',
+  'jimu/WidgetManager',
   'bootstrap/Dropdown',
   'bootstrap/Tab',
   'bootstrap/Modal',
@@ -11,7 +12,8 @@ define([
   declare,
   BaseWidget,
   utils,
-  html) {
+  html,
+  widgetManager) {
   //To create a widget, you need to derive from BaseWidget.
   return declare([BaseWidget], {
 
@@ -74,7 +76,10 @@ define([
     //   console.log('serviceTotem::resize');
     // }
 
-    //methods to communication between widgets:
+    _close: function () {
+      this.widgetManager.closeWidget(this.id);
+    },
+
 
   });
 
